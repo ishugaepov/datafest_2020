@@ -1,0 +1,85 @@
+\documentclass[openany,11pt]{book}
+
+% --- Packages ---
+\usepackage[usenames, dvipsnames]{color} % Cool colors
+\usepackage{enumerate, amsmath, amsthm, amssymb, algorithm, algpseudocode, pifont, subfig, fullpage, dashrule, tikz, bbm, booktabs, bm, verbatim, url, mathtools, wrapfig}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage[numbers]{natbib}
+\usepackage{import}
+\usepackage[utf8x]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{csquotes}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,positioning}
+\definecolor{olivegreen}{rgb}{0,0.6,0}
+
+\usepackage{titlesec}
+\usepackage{lipsum}
+
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries}{}{0pt}{\huge}
+
+
+\usepackage[default,scale=1.0]{opensans}
+\renewcommand\seriesdefault{l}
+\renewcommand\mddefault{m}
+\renewcommand\bfdefault{m}
+
+% --- Misc. ---
+\hbadness=10000 % No "underfull hbox" messages.
+\setlength{\parindent}{0pt} % Removes all indentation.
+
+% --- Commands ---
+\input{commands}
+
+% Nice coloring of references.
+\usepackage{hyperref}
+\hypersetup{               
+    colorlinks=true,              
+    breaklinks=true,               
+    urlcolor=dblue,
+    linkcolor=dgreen,
+    linkbordercolor=dgreen,
+    citecolor=dblue,
+    citebordercolor=dblue
+}
+
+% --- For bibliography ---
+\usepackage{bibunits}
+
+% --- Meta Info ---
+\title{DataFest 2020 Notes}
+\author{Ilnur Shugaepov \\ VK.com}
+\date{September 2020}
+
+% \doparttoc
+% --- Begin Document ---
+\begin{document}
+\maketitle
+\setcounter{tocdepth}{1}
+\small{\tableofcontents}
+\newpage
+
+% -------------
+% -- ML REPA --
+% -------------
+\newpage
+\chapter{ML REPA}
+\subimport{chapters/}{ml_repa.tex}
+
+% ----------------------
+% -- Interpretable ML --
+% ----------------------
+\newpage
+\chapter{Interpretable ML}
+\subimport{chapters/}{interpret_ml.tex}
+
+% --------------
+% -- GRAPH ML --
+% --------------
+\newpage
+\chapter{Graph ML}
+\subimport{chapters/}{graph_ml.tex}
+
+\end{document}

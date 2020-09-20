@@ -1,0 +1,20 @@
+К сожалению, на момент написания текста в записи был доступен только один доклад.
+
+\section{ML Interpretability Problems in Tabular Data Tasks}
+
+\textbf{Video:}~\url{https://youtu.be/jOfl9_utKx8} \\
+
+Основные рекомендации из первого доклада
+
+\begin{itemize}
+    \item \textbf{Perform error analysis} --- нужно найти примеры, на которых модель ошибается сильнее всего, и понять почему это происходит, например, посмотрев на SHAP values.
+    
+    Это анализ может помочь сгенерировать новые идеи для feature-engineering'a, чтобы улучшить модель.
+    
+    \item \textbf{Start with simple models} --- при работе над новой задачей, всегда хорошо начинать с простых моделей, которые легко интерпретировать, например, с логистической регрессии, неглубоких решающих деревьев.
+    
+    \item Remove biases from data.
+    
+    \item State-of-the-art подход к анализу важности фичей - SHAP\footnote{\url{https://github.com/slundberg/shap}} values, но есть и другие интересные подходы, к которым стоит присмотреться: Lime\footnote{\url{https://github.com/marcotcr/lime}}, Permutation importance\footnote{\url{https://scikit-learn.org/stable/modules/permutation_importance.html}}.
+    
+\end{itemize}
